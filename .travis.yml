@@ -13,6 +13,7 @@ deploy:
   - build/*
   on:
     repo: kevinslin/travis-test
+    all_branches: true
   skip_cleanup: 'true'
 env:
   global:
