@@ -1,11 +1,8 @@
 language: node_js
-
 node_js:
-  - 12
-
+- 12
 script:
-  - ./build.sh
-
+- "./build.sh"
 deploy:
   provider: releases
   api_key:
@@ -13,7 +10,10 @@ deploy:
   overwrite: true
   file_glob: true
   file:
-    - build/*
+  - build/*
   on:
     repo: kevinslin/travis-test
   skip_cleanup: 'true'
+env:
+  global:
+    secure: kyf37Pi4edX1FpAmCKkCkDOfHNIMy+sRKP/Bxc1uo010zdx1B+xgVEsdto/fv9pPBkEet/wyrtrFlzgFkXNsyCTdi3Hg//PTVzym2nUnzHdCB5dIrLFj9WygmC0x5/o2zCQBAKCz43k0EfGfXLxu7VF6nMyhqCh7Hc7HD+j8YuRCIl51lNO0QR4I5Sg3P7jo4j6d/DLIQjuK8Pr+ujmoTNHpg90g3bdUeusEvSKYwPO+Nzjb0gB67TAtjxofv26bu30n1F1VQCMhlVNpgJ9Px2tgqXkSWtHNDzCeqrKPvD0tBxiVrJbqSQ3nuJcn7nbLnNS45Ei3L1z+htPy2uuO4l5M/HgL5zuyc4LLFC/7eegWRfDGd65Q+B1RuiktAkY9Kv2qWAazg4FYG6d4aBf4jvDQ7etCv0K/ANSlC5SSmc8MSGR2PPggtXnJHS/mfUi9WMcRU0CCIuSlavmpw6b++xfvt8NDYaOtv1GwNB98mA7+6bWwCEvvNxTj+iHC+79h7d9w3kb35ujd6444NFQnskEth0eaZajpKBHbuUGVESG2P/+3OaXQA42c93A1tejRwtk65g5S/GTTlZUCL0x7B8LCMDTts9PFcJDTIstfmKOuZJdWgBy8TukkNEGv7HS8a+dbTb85ExkTgs//ycexYpOHPdckhUxfggRyrC3LoKw=
