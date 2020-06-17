@@ -1,0 +1,19 @@
+language: node_js
+node_js:
+  - 12
+before_install:
+  - curl -o- -L https://yarnpkg.com/install.sh | bash
+  - export PATH="$HOME/.yarn/bin:$PATH"
+
+script:
+  - ./build.sh
+
+deploy:
+  #name: $BUILD_NAME
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file:
+    - ./thebuild
+  skip_cleanup: true
+  on:
+    tags: true
