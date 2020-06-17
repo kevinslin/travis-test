@@ -10,7 +10,10 @@ deploy:
   provider: releases
   api_key:
     secure: CWqtg/6MaKtBNwdWBnuh3sTzhUnBhsxDDTAcFVAKp5FeF6SWBuz/FY5sXMimGwERwhURpZ4aaNAPp+UpufEiXLDfm/42DCFYgzeGzMFaCCrxUilf/rusoICJrWggIMjgnCZ8/4rda6LvjS8MRgJbGiaNhvvoZHfg+d9lcvbmUfsVJurW1IafL4wpxa8t9u6zvjMVPrc6spuTSEAsfAMSjK5lXoKA98vTtEhNbOflJWue0r0l0cFk5vl3qroOhUGFuZdrmW24oCcc6xeoP5qCllscLSlRvHOIUWzczukiItDvMqPmc5QE0f51xZHS5EMaiBADojJwpAifWYm8bWbtQgxkO0gSXeDXbpDSb3GaB26teHJU8hkDPtnRcP+Nw+NgMN7ZcIsyIfqKNAomvquydgBgOu4i8BFTgFCQzCLIdZbRpY7nQB4InWyyF/l9JBJqeOZu/NLqMYoS+ZTB7Qm13imY7hqATr5hvje2JQx41GLb6WOKSVYA1WSe9U/KiznAV46xkt53ZmU0VwtCbK8Wh8wNMrvBXDhvqorISDwoELB0HaoMKMGtgR+BD1tSAebGPC7SR6Yw6473njsbjmCBJpRbfa4TDl8GRGTFyDqPfZCzqoLSKemKZpEg5T00QrqBUilgQbm+b23A+ozNvtxLhZBhc4XMcdR8D/5rN7qUHLQ=
-  file: thebuild
+  file: ./thebuild
+  file_glob: true
+  file:
+    - build/*
   on:
     repo: kevinslin/travis-test
   skip_cleanup: 'true'
